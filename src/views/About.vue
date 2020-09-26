@@ -10,12 +10,22 @@
 </template>
 
 <script>
-import { onMounted, onUnmounted, onUpdated } from 'vue'
-import { useStore } from 'vuex'
+import {
+  onMounted,
+  onUnmounted,
+  onUpdated
+} from 'vue'
+import {
+  useStore
+} from 'vuex'
 
 export default {
   setup() {
-    const { state, commit, dispatch } = useStore()
+    const {
+      state,
+      commit,
+      dispatch
+    } = useStore()
     const handelAdd = () => {
       commit('increment', 5)
     }
@@ -31,9 +41,12 @@ export default {
     onUnmounted(() => {
       console.log('unmounted!')
     })
-    return { state, handelAdd, handelMinus }
+    return {
+      state,
+      handelAdd,
+      handelMinus
+    }
   },
-
 
 }
 </script>

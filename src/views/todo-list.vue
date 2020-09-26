@@ -8,11 +8,7 @@
       <h3>待办列表（{{ todos.length }}）</h3>
     </div>
     <ul>
-      <li
-        v-for="item in todos"
-        :key="item.id"
-        @click="handleChangeStatus(item, true)"
-      >
+      <li v-for="item in todos" :key="item.id" @click="handleChangeStatus(item, true)">
         {{ item.text }}
       </li>
     </ul>
@@ -20,11 +16,7 @@
       <h3>已办列表（{{ dones.length }}）</h3>
     </div>
     <ul>
-      <li
-        v-for="item in dones"
-        :key="item.id"
-        @click="handleChangeStatus(item, false)"
-      >
+      <li v-for="item in dones" :key="item.id" @click="handleChangeStatus(item, false)">
         <input type="checkbox" checked />
         <label>{{ item.text }}</label>
       </li>
