@@ -21,5 +21,10 @@ export default createRouter({
       name: 'transform',
       component: () => import('../views/Transform.vue'),
     },
+    {
+      path: '/animate',
+      name: 'animate',
+      component: () => import('../views/animate/Animate.vue'),
+    },
   ],
 })
