@@ -5,15 +5,21 @@ export default createRouter({
   routes: [
     {
       path: '/',
-      component: () => import('../views/Home.vue')
+      component: () => import('../views/Home.vue'),
     },
     {
       path: '/about',
-      component: () => import('../views/About.vue')
+      component: () => import('../views/About.vue'),
     },
     {
       path: '/todolist',
-      component: () => import('../views/todo-list.vue')
-    }
-  ]
+      name: 'todolist',
+      component: () => import('../views/todo-list.vue'),
+    },
+    {
+      path: '/transform',
+      name: 'transform',
+      component: () => import('../views/Transform.vue'),
+    },
+  ],
 })

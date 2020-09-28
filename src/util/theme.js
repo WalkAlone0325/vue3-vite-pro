@@ -1,5 +1,5 @@
 export default class themeChanger {
-  constructor() { }
+  constructor() {}
   _addDarkTheme() {
     const darkThemeLinkEl = document.createElement('link')
     darkThemeLinkEl.setAttribute('rel', 'stylesheet')

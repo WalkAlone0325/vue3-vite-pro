@@ -11,17 +11,17 @@ import themeChanger from '../util/theme.js'
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
   },
   data() {
     return {
-      themeChanger: null
+      themeChanger: null,
     }
   },
   methods: {
     darkThemeSwitch() {
       this.themeChanger._darkThemeSwitch()
-    }
+    },
   },
   created() {
     this.themeChanger = new themeChanger()

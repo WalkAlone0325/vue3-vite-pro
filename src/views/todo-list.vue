@@ -8,9 +8,11 @@
       <h3>待办列表（{{ todos.length }}）</h3>
     </div>
     <ul>
-      <li v-for="item in todos" :key="item.id" @click="handleChangeStatus(item, true)">
-        {{ item.text }}
-      </li>
+      <li
+        v-for="item in todos"
+        :key="item.id"
+        @click="handleChangeStatus(item, true)"
+      >{{ item.text }}</li>
     </ul>
     <div>
       <h3>已办列表（{{ dones.length }}）</h3>
@@ -34,30 +36,30 @@ export default {
         {
           id: 1,
           done: false,
-          text: '吃饭'
+          text: '吃饭',
         },
         {
           id: 2,
           done: true,
-          text: '睡觉'
+          text: '睡觉',
         },
         {
           id: 3,
           done: false,
-          text: '打豆豆'
-        }
+          text: '打豆豆',
+        },
       ],
-      todo: ''
+      todo: '',
     })
 
     // 使用计算属性生成待办列表
     const todos = computed(() => {
-      return state.todolist.filter(item => !item.done)
+      return state.todolist.filter((item) => !item.done)
     })
 
     // 使用计算属性生成已办列表
     const dones = computed(() => {
-      return state.todolist.filter(item => item.done)
+      return state.todolist.filter((item) => item.done)
     })
 
     // 修改待办状态
@@ -74,13 +76,13 @@ export default {
       state.todolist.push({
         text: state.todo,
         id: Date.now(),
-        done: false
+        done: false,
       })
       state.todo = ''
     }
 
     return { state, todos, dones, handleChangeStatus, handleAddTodo }
-  }
+  },
 }
 </script>
 
